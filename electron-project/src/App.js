@@ -15,6 +15,9 @@ function App() {
         </div>
         <div className = "right-container">
             <div className = "right-iner-container">
+              <h1 className = "logo">
+                title
+              </h1>
 
             </div>
         </div>

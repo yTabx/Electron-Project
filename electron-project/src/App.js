@@ -7,7 +7,7 @@ function App() {
       <div className = "contianer">
         <div className = "left-container">
           <div className = "left-iner-container">
-              <h1>
+              <h1 className = "logo">
                 vile
 
               </h1>

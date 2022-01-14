@@ -82,7 +82,7 @@
 .right-iner-container-lower {
   position: absolute;
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100vh - 50px);
   top: 50px;
   border-radius: 15px 0 0 0;
   margin-left: 0;

@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import './pages/Proxies.js'
+import Proxies from './pages/Proxies.js';
 function App() {
   return (
     <div className = "App">
@@ -23,7 +24,7 @@ function App() {
                   <div className = "icon"><i class="fas fa-tasks"></i></div>
                 </div>
               <div type="button" className = "left-pannel-button">
-                  <div className = "icon"><i class="fas fa-mask" ></i></div>
+                  <div className = "icon"><i class="fas fa-address-card"></i></div>
                 </div>
               <div type="button" className = "left-pannel-button">
                   <div className = "icon"><i class="fas fa-search"></i></div> 
@@ -40,7 +41,9 @@ function App() {
             </div>
             <div className = "right-iner-container-lower">
               <h1 className = "logo">
-                title
+                <Proxies />
+
+                
               </h1>
 
             </div>

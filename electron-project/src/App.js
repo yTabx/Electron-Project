@@ -13,11 +13,21 @@ function App() {
           </div>
           <div className = "left-iner-container-bottom">
           
-              <div type="button" className = "left-pannel-button">dahshboard</div> 
-              <div type="button" className = "left-pannel-button">analytics</div>
-              <div type="button" className = "left-pannel-button">tasks</div>
-              <div type="button" className = "left-pannel-button">proxies</div>
-              <div type="button" className = "left-pannel-button">search terms</div>
+              <div type="button" className = "left-pannel-button">
+                  <div className = "icon"><i className="fas fa-columns"></i></div>
+                </div> 
+              <div type="button" className = "left-pannel-button">
+                  <div className = "icon"><i className = "fas fa-chart-line"></i></div>
+                </div>
+              <div type="button" className = "left-pannel-button">
+                  <div className = "icon"><i class="fas fa-tasks"></i></div>
+                </div>
+              <div type="button" className = "left-pannel-button">
+                  <div className = "icon"><i class="fas fa-mask" ></i></div>
+                </div>
+              <div type="button" className = "left-pannel-button">
+                  <div className = "icon"><i class="fas fa-search"></i></div> 
+                </div>
       
           </div>
         </div>

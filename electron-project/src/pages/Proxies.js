@@ -30,7 +30,7 @@ class Proxies extends React.Component {
         var newString = "";
         //seperate th
         for (let i = 0; i < len; i++) {
-            if ( s[i] == ',' || s[i] == ' ' || s[i] == '\n') {
+            if ( s[i] === ',' || s[i] === ' ' || s[i] === '\n') {
                 if (newString.length > 0){  
                     array.push(newString);
                 }

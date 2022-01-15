@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Proxies.css'
 
+
 class Proxies extends React.Component {
     constructor(props) {
       super(props);
@@ -13,43 +14,13 @@ class Proxies extends React.Component {
     }
     handleChange(event) {    this.setState({value: event.target.value});  }
     handleSubmit(event) {
-        this.writeToProxiesFile(this.state.value);
       
+      var s = this.state.value;
+      console.log(s);
       event.preventDefault();
     }
     
 
-    writeToProxiesFile(s){
-        //take a string s, check its formatt, if formatt okay then write to file 
-        let len = s.length;
-        var array = new Array;
-        //for each character, check for comma or space or newline
-        //seperate before to now into new Array
-  
-        var newString = "";
-        //seperate th
-        for (let i = 0; i < len; i++) {
-            if ( s[i] === ',' || s[i] === ' ' || s[i] === '\n') {
-                if (newString.length > 0){  
-                    array.push(newString);
-                }
-                newString = [];
-            }else{
-                newString += s[i];
-                console.log(s[i]);
-            }
-            
-        }
-        if (newString.length > 0 ){
-            array.push(newString);
-        }
-
-
-
-        //write to the file
-        console.log(array);
-        return;
-    }
     render() {
       return (
         <div className = "proxies-container">

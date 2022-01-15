@@ -41,5 +41,46 @@ app.on('activate', () => {
   }
 })
 
+
+
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+function writeToProxiesFile(s){
+  //take a string s, check its formatt, if formatt okay then write to file 
+  let len = s.length;
+  var array = new Array;
+  //for each character, check for comma or space or newline
+  //seperate before to now into new Array
+
+  var newString = "";
+  //seperate th
+  for (let i = 0; i < len; i++) {
+      if ( s[i] === ',' || s[i] === ' ' || s[i] === '\n') {
+          if (newString.length > 0){  
+              array.push(newString);
+          }
+          newString = [];
+      }else{
+          newString += s[i];
+          console.log(s[i]);
+      }
+      
+  }
+  if (newString.length > 0 ){
+      array.push(newString);
+  }
+  //comma seperated string
+  newString = "";
+  for (let i = 0 ;i < array.length;i++){
+      newString = newString + array[i];
+      newString += ',';
+  }
+  newString.substring(0,newString.length);
+
+  //write to the file
+  
+  fs.writeFileSync('../../public/proxies.txt',newString);
+  console.log(array);
+  return;
+}

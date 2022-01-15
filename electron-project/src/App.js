@@ -1,55 +1,78 @@
 import logo from './logo.svg';
 import './App.css';
 import './pages/Proxies.js'
-import Proxies from './pages/Proxies.js';
+import Proxies from './pages/Proxies';
+
+import React, { useEffect } from 'react';
+import {HashRouter,Route,Routes,Link,} from "react-router-dom";
+
+import SearchTerms from './pages/SearchTerms';
+
 function App() {
   return (
-    <div className = "App">
-      <div className = "contianer">
-        <div className = "left-container">
-          <div className = "left-iner-container-top">
-            <h1 className = "logo">
-              vile
-            </h1>
-          </div>
-          <div className = "left-iner-container-bottom">
-          
-              <div type="button" className = "left-pannel-button">
-                  <div className = "icon"><i className="fas fa-columns"></i></div>
-                </div> 
-              <div type="button" className = "left-pannel-button">
-                  <div className = "icon"><i className = "fas fa-chart-line"></i></div>
-                </div>
-              <div type="button" className = "left-pannel-button">
-                  <div className = "icon"><i class="fas fa-tasks"></i></div>
-                </div>
-              <div type="button" className = "left-pannel-button">
-                  <div className = "icon"><i class="fas fa-address-card"></i></div>
-                </div>
-              <div type="button" className = "left-pannel-button">
-                  <div className = "icon"><i class="fas fa-search"></i></div> 
-                </div>
-      
-          </div>
-        </div>
-        <div className = "right-container">
-            <div className = "right-iner-container-upper">
+    <HashRouter>
+      <div className = "App">
+        <div className = "contianer">
+          <div className = "left-container">
+            <div className = "left-iner-container-top">
               <h1 className = "logo">
-                title
+                vile
               </h1>
-
             </div>
-            <div className = "right-iner-container-lower">
-              <h1 className = "logo">
-                <Proxies />
+            <div className = "left-iner-container-bottom">
 
+                <Link to =  "/">
+                <div type="button" className = "left-pannel-button">
+                    <div className = "icon"><i className="fas fa-columns" id = "dash-btn"></i></div>
+                  </div> 
+                </Link>
+
+                <Link to = "/analytics">
+                <div type="button" className = "left-pannel-button" id = "analytics-btn">
+                    <div className = "icon"><i className = "fas fa-chart-line"></i></div>
+                  </div>
+                </Link>
+
+                <Link to = "/tasks">    
+                <div type="button" className = "left-pannel-button" id = "tasks-btn">
+                    <div className = "icon"><i class="fas fa-tasks"></i></div>
+                  </div>
+                </Link>
+
+                <Link to ="/proxies"> 
+                <div type="button" className = "left-pannel-button" id = "proxies-btn">
+                    <div className = "icon"><i class="fas fa-address-card"></i></div>
+                  </div>
+                </Link>
+
+                <Link to = "/search">
+                <div type="button" className = "left-pannel-button" id = "search-btn">
+                    <div className = "icon"><i class="fas fa-search"></i></div> 
+                  </div>
+                </Link>
+        
+            </div>
+          </div>
+          <div className = "right-container">
+              <div className = "right-iner-container-upper">
+                <h1 className = "logo">
+                  title
+                </h1>
+
+              </div>
+              <div className = "right-iner-container-lower">
+                <Routes>
+                  
+                  <Route exact path = "/proxies" element = {<Proxies/>}/>
+                  <Route exact path = "/search" element = {<SearchTerms/>}/>
+                  
                 
-              </h1>
-
-            </div>
+                </Routes>
+              </div>
+          </div>
         </div>
       </div>
-    </div>
+    </HashRouter>
   );
 }
 

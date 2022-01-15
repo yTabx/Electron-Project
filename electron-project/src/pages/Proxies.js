@@ -1,6 +1,10 @@
 
 import React from 'react';
 import './proxies.css'
+
+function saveProxyList(){
+    console.log("button-clicked")
+}
 function Proxies() {
     return (
         <div className = "proxies-container">
@@ -11,7 +15,7 @@ function Proxies() {
             </textarea>
             <br/>
             <br/>
-            <button>save</button>
+            <button onClick = "saveProxyList();" >save</button>
             <h1> proxies</h1>
             <div className = "proxy list">
                 insert proxy list here

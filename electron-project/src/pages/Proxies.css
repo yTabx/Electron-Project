@@ -7,3 +7,19 @@
     width: 400px;
     height: 100px;
 }
+input{
+    color:#673AB7;
+    background-color: #121212;
+    width: 100px;
+    height:50px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border:none;
+}
+input:hover{
+    background-color: #1212128f;
+}
+input:active{
+    background-color:#673AB7;
+    color: white;
+}

@@ -25,8 +25,7 @@ class Proxies extends React.Component {
         var array = new Array;
         //for each character, check for comma or space or newline
         //seperate before to now into new Array
-        var lower = 0;
-        var upper = 0;
+  
         var newString = "";
         //seperate th
         for (let i = 0; i < len; i++) {
@@ -44,6 +43,10 @@ class Proxies extends React.Component {
         if (newString.length > 0 ){
             array.push(newString);
         }
+
+
+
+        //write to the file
         console.log(array);
         return;
     }

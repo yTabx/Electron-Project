@@ -1,5 +1,10 @@
+
+
 import React, { Component } from 'react';
 import './Proxies.css'
+const { ipcRenderer } = window.require('electron');
+
+/*
 
 
 class Proxies extends React.Component {
@@ -14,28 +19,31 @@ class Proxies extends React.Component {
     }
     handleChange(event) {    this.setState({value: event.target.value});  }
     handleSubmit(event) {
-      
+      console.log("hi");
       var s = this.state.value;
-      console.log(s);
+      console.log("from component 1");
+      //ipcRenderer.send('writeToProxyFile','ping');
       event.preventDefault();
     }
     
-
-    render() {
+*/
+    function Proxies() {
       return (
+          <div className = "Proxies">
         <div className = "proxies-container">
-            <form onSubmit={this.handleSubmit}>
-                <h1> proxies </h1>
-                <textarea className = "proxy-textarea" value={this.state.value} onChange={this.handleChange} placeholder = "paste proxie list here or type them out seperated by commas or newlines"/> 
+            <form >
+                <div> proxiesss </div> 
+                <textarea className = "proxy-textarea"  placeholder = "paste proxie list here or type them out seperated by commas or newlines"/> 
 
                 <br/> 
-                <input type="submit" value="Submit" />
+                <input type="submit"  />
             </form>
+        </div>
         </div>
       );
     }
 
-  }
+  
   export default Proxies;
 
 
@@ -43,33 +51,3 @@ class Proxies extends React.Component {
 
 
 
-/*
-import React from 'react';
-import './proxies.css'
-
-function handleProxyListSubmit(){
-    console.log("button-clicked")
-}
-function handleProxyListChange(){
-    console.log("button-clicked")
-}
-function Proxies() {
-    return (
-        <div className = "proxies-container">
-            <h1>  upload</h1>
-            
-            <form onSubmit={this.handleProxyListSubmit}>
-                <label>
-                proxies:
-                <textarea value={this.state.value} onChange={this.handleProxyListChange} />        </label>
-                <input type="submit" value="Submit" />
-            </form>
-
-            <h1> proxies</h1>
-            <div className = "proxy list">
-                insert proxy list here
-            </div>
-        </div>
-    );
-}
-export default Proxies*/

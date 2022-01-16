@@ -16,8 +16,7 @@ class SearchTerms extends React.Component {
     handleSubmit(event) {
       
       var s = this.state.value;
-      console.log(s);
-      event.preventDefault();
+      
     }
     
 

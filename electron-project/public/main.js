@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 
+
 function createWindow () {
   // Create the browser window.
   const win = new BrowserWindow({
@@ -45,7 +46,7 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
+/*
 function writeToProxiesFile(s){
   //take a string s, check its formatt, if formatt okay then write to file 
   let len = s.length;
@@ -83,4 +84,4 @@ function writeToProxiesFile(s){
   fs.writeFileSync('../../public/proxies.txt',newString);
   console.log(array);
   return;
-}
+}*/

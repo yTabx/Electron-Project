@@ -11,6 +11,8 @@ import React, { useEffect } from 'react';
 import {HashRouter,Route,Routes,Link,} from "react-router-dom";
 
 import SearchTerms from './pages/SearchTerms';
+const { ipcRenderer } = window.require('electron');
+
 
 function App() {
   return (

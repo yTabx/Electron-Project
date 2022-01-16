@@ -20,42 +20,8 @@
   
   
 }
-.left-iner-container-bottom {
-  position: absolute;
-  top: 50px;
-  
-  margin-right: 10px;
-  width: 100%;
-  height: calc(100% - 50px );
 
 
-  
-}
-
-
-.left-pannel-button{
-  position: relative;
-
-  width: calc(100% );
-  font-size: 40px;
-  text-align:center;
-  height: calc(100% /5);
-  color: black;
-
-}
-
-.icon{
-  padding-top:33%;
-  vertical-align:middle;
-}
-.left-pannel-button:hover{
-  
-  color:#673AB7;
-  font-size: 50px;
-  
-  
-  
-}
 
 
 
@@ -93,6 +59,19 @@
   
   
 }
+
+.right-inner-lower-border{
+  margin: 20px;
+  height : calc(100vh - 130px);
+  width : (100% - 50px);
+
+  
+  outline: 3px solid #673AB7;
+  border-radius: 10px 10px 0 0 ;
+  padding: 30px;
+}
+
+
 .logo {
   color:#673AB7;
   text-align: center;

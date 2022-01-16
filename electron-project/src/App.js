@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import './pages/Proxies.js'
 import Proxies from './pages/Proxies';
+import Navbar from './components/navbar/Navbar';
+import Tasks from './pages/Tasks';
+import Dashboard from './pages/Dashboard';
+import Analytics from './pages/Analytics'; 
 
 import React, { useEffect } from 'react';
 import {HashRouter,Route,Routes,Link,} from "react-router-dom";
@@ -20,36 +24,7 @@ function App() {
               </h1>
             </div>
             <div className = "left-iner-container-bottom">
-
-                <Link to =  "/" activeStyle>
-                <div type="button" className = "left-pannel-button">
-                    <div className = "icon"><i className="fas fa-columns" id = "dash-btn"></i></div>
-                  </div> 
-                </Link>
-
-                <Link to = "/analytics" activeStyle>
-                <div type="button" className = "left-pannel-button" id = "analytics-btn">
-                    <div className = "icon"><i className = "fas fa-chart-line"></i></div>
-                  </div>
-                </Link>
-
-                <Link to = "/tasks" activeStyle>    
-                <div type="button" className = "left-pannel-button" id = "tasks-btn">
-                    <div className = "icon"><i class="fas fa-tasks"></i></div>
-                  </div>
-                </Link>
-
-                <Link to ="/proxies" activeStyle> 
-                <div type="button" className = "left-pannel-button" id = "proxies-btn">
-                    <div className = "icon"><i class="fas fa-address-card"></i></div>
-                  </div>
-                </Link>
-
-                <Link to = "/search" activeStyle>
-                <div type="button" className = "left-pannel-button" id = "search-btn">
-                    <div className = "icon"><i class="fas fa-search"></i></div> 
-                  </div>
-                </Link>
+              <Navbar />
         
             </div>
           </div>
@@ -61,13 +36,17 @@ function App() {
 
               </div>
               <div className = "right-iner-container-lower">
+                <div className = "right-inner-lower-border">
                 <Routes>
                   
+                  <Route exact path = "/dashboard" element = {<Dashboard/>}/>
+                  <Route exact path = "/analytics" element = {<Analytics/>}/>
+                  <Route exact path = "/tasks" element = {<Tasks/>}/>
                   <Route exact path = "/proxies" element = {<Proxies/>}/>
-                  <Route exact path = "/search" element = {<SearchTerms/>}/>
-                  
+                  <Route exact path = "/search" element = {<SearchTerms/>}/>    
                 
                 </Routes>
+                </div>
               </div>
           </div>
         </div>

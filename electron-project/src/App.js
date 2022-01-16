@@ -21,31 +21,31 @@ function App() {
             </div>
             <div className = "left-iner-container-bottom">
 
-                <Link to =  "/">
+                <Link to =  "/" activeStyle>
                 <div type="button" className = "left-pannel-button">
                     <div className = "icon"><i className="fas fa-columns" id = "dash-btn"></i></div>
                   </div> 
                 </Link>
 
-                <Link to = "/analytics">
+                <Link to = "/analytics" activeStyle>
                 <div type="button" className = "left-pannel-button" id = "analytics-btn">
                     <div className = "icon"><i className = "fas fa-chart-line"></i></div>
                   </div>
                 </Link>
 
-                <Link to = "/tasks">    
+                <Link to = "/tasks" activeStyle>    
                 <div type="button" className = "left-pannel-button" id = "tasks-btn">
                     <div className = "icon"><i class="fas fa-tasks"></i></div>
                   </div>
                 </Link>
 
-                <Link to ="/proxies"> 
+                <Link to ="/proxies" activeStyle> 
                 <div type="button" className = "left-pannel-button" id = "proxies-btn">
                     <div className = "icon"><i class="fas fa-address-card"></i></div>
                   </div>
                 </Link>
 
-                <Link to = "/search">
+                <Link to = "/search" activeStyle>
                 <div type="button" className = "left-pannel-button" id = "search-btn">
                     <div className = "icon"><i class="fas fa-search"></i></div> 
                   </div>

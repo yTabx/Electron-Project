@@ -14,7 +14,6 @@ import SearchTerms from './pages/SearchTerms';
 
 
 
-
 function App() {
   return (
     <HashRouter>
@@ -23,7 +22,7 @@ function App() {
           <div className = "left-container">
             <div className = "left-iner-container-top">
               <h1 className = "logo">
-                vile
+                viles
               </h1>
             </div>
             <div className = "left-iner-container-bottom">
@@ -34,7 +33,7 @@ function App() {
           <div className = "right-container">
               <div className = "right-iner-container-upper">
                 <h1 className = "logo">
-                  titles
+                  title
                 </h1>
 
               </div>
@@ -52,8 +51,6 @@ function App() {
                 <button onClick={()=>{
               
               console.log("clickesd");
-             
-              window.api.send('anything-asynchronous', "hey");
               console.log("clickesd after");
     
           }}>Async</button>

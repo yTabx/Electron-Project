@@ -1,5 +1,5 @@
 const { ipcMain,app, BrowserWindow } = require('electron')
-
+const path = require('path');
 
 function createWindow () {
   // Create the browser window.
@@ -8,7 +8,7 @@ function createWindow () {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-      preload: path.join(app.getAppPath(), 'preload.js')
+      preload: path.join( '../src/App.js','preload.js')
     }
   })
   //remove menu bar from top
@@ -43,12 +43,12 @@ app.on('activate', () => {
   }
 })
 
-ipcMain.on("msg", (event,arg) => {
+ipcMain.on("msg", (Event,arg) => {
   console.log("main process");
 })
 
 //write to search terms
-ipcMain.on('anything-asynchronous', (event, arg) => {
+ipcMain.on('anything-asynchronous', (Event,arg) => {
   // gets triggered by the async button defined in the App component
   console.log("async") // prints "async ping"
 })

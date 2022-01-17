@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SearchTerms.css'
-const { ipcRenderer } = window;
+const { api } = window;
 
 class SearchTerms extends React.Component {
     constructor(props) {
@@ -18,8 +18,8 @@ class SearchTerms extends React.Component {
       var s = this.state.value;
       console.log (s +" from component");
       
-      ipcRenderer.send('anything-asynchronous', 'ping')  ;
-      ipcRenderer.sendSync('anything-synchronous', 'pong');    
+      api.send('anything-asynchronous', 'ping')  ;
+      api.sendSync('anything-synchronous', 'pong');    
     }
     
 

@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import './Proxies.css'
-const { ipcRenderer } = window.require('electron');
+const ipcRenderer = window.ipcRenderer;
 
 /*
 
@@ -32,7 +32,7 @@ class Proxies extends React.Component {
           <div className = "Proxies">
         <div className = "proxies-container">
             <form >
-                <div> proxiesss </div> 
+                <div> proxies </div> 
                 <textarea className = "proxy-textarea"  placeholder = "paste proxie list here or type them out seperated by commas or newlines"/> 
 
                 <br/> 

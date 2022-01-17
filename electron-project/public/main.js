@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { ipcMain,app, BrowserWindow } = require('electron')
 
 
 function createWindow () {
@@ -7,7 +7,8 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      preload: path.join(app.getAppPath(), 'preload.js')
     }
   })
   //remove menu bar from top
@@ -40,6 +41,17 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
   }
+})
+
+//write to search terms
+ipcMain.on('anything-asynchronous', (event, arg) => {
+  // gets triggered by the async button defined in the App component
+  console.log("async") // prints "async ping"
+})
+
+// gets triggered by the sync button defined in the App component
+ipcMain.on('anything-synchronous', (event, arg) => {
+  console.log("sync",arg) // prints "sync ping"
 })
 
 

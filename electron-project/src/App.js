@@ -11,7 +11,9 @@ import React, { useEffect } from 'react';
 import {HashRouter,Route,Routes,Link,} from "react-router-dom";
 
 import SearchTerms from './pages/SearchTerms';
-const { ipcRenderer } = window.require('electron');
+
+const { ipcRenderer } = window;
+
 
 
 function App() {
@@ -48,6 +50,12 @@ function App() {
                   <Route exact path = "/search" element = {<SearchTerms/>}/>    
                 
                 </Routes>
+                <button onClick={()=>{
+              
+              ipcRenderer.send('anything-asynchronous', 'ping')
+    
+          }}>Async</button>
+          
                 </div>
               </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SearchTerms.css'
-
+const { ipcRenderer } = window;
 
 class SearchTerms extends React.Component {
     constructor(props) {
@@ -16,7 +16,10 @@ class SearchTerms extends React.Component {
     handleSubmit(event) {
       
       var s = this.state.value;
+      console.log (s +" from component");
       
+      ipcRenderer.send('anything-asynchronous', 'ping')  ;
+      ipcRenderer.sendSync('anything-synchronous', 'pong');    
     }
     
 
@@ -24,7 +27,7 @@ class SearchTerms extends React.Component {
       return (
         <div className = "search-container">
             <form onSubmit={this.handleSubmit}>
-                <h1> search terms </h1>
+                <div > search terms</div>
                 <textarea className = "search-textarea" value={this.state.value} onChange={this.handleChange} placeholder = "paste proxie list here or type them out seperated by commas or newlines"/> 
 
                 <br/> 

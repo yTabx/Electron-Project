@@ -43,6 +43,10 @@ app.on('activate', () => {
   }
 })
 
+ipcMain.on("msg", (event,arg) => {
+  console.log("main process");
+})
+
 //write to search terms
 ipcMain.on('anything-asynchronous', (event, arg) => {
   // gets triggered by the async button defined in the App component

@@ -12,7 +12,6 @@ import {HashRouter,Route,Routes,Link,} from "react-router-dom";
 
 import SearchTerms from './pages/SearchTerms';
 
-const { ipcRenderer } = window;
 
 
 
@@ -35,7 +34,7 @@ function App() {
           <div className = "right-container">
               <div className = "right-iner-container-upper">
                 <h1 className = "logo">
-                  title
+                  titles
                 </h1>
 
               </div>
@@ -52,10 +51,13 @@ function App() {
                 </Routes>
                 <button onClick={()=>{
               
-              ipcRenderer.send('anything-asynchronous', 'ping')
+              console.log("clickesd");
+             
+              window.api.send('anything-asynchronous', "hey");
+              console.log("clickesd after");
     
           }}>Async</button>
-          
+
                 </div>
               </div>
           </div>
